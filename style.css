@@ -1,0 +1,97 @@
+body{
+    margin:0;
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:transparent;
+    overflow:hidden;
+    font-family:Arial;
+}
+
+.player{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+#playBtn{
+    width:80px;
+    height:80px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#6c63ff;
+    color:white;
+
+    font-size:32px;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#playBtn:hover{
+    transform:scale(1.1);
+}
+
+.waves{
+    display:flex;
+    gap:5px;
+    height:30px;
+    opacity:0;
+    transition:.3s;
+}
+
+.waves.active{
+    opacity:1;
+}
+
+.waves span{
+    width:6px;
+    height:100%;
+    background:#6c63ff;
+    border-radius:20px;
+
+    animation:wave 1s infinite ease-in-out;
+}
+
+.waves span:nth-child(2){
+    animation-delay:.2s;
+}
+
+.waves span:nth-child(3){
+    animation-delay:.4s;
+}
+
+@keyframes wave{
+    0%,100%{
+        transform:scaleY(.3);
+    }
+
+    50%{
+        transform:scaleY(1);
+    }
+}
+
+.progress-container{
+    width:200px;
+    height:10px;
+
+    background:#ddd;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+}
+.progress{
+    width:0%;
+    height:100%;
+    background:#6c63ff;
+}
