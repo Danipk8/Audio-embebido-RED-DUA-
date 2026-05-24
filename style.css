@@ -10,6 +10,8 @@ body{
     overflow:hidden;
 
     position:relative;
+
+    background:#000000;
 }
 
 /* FONDO */
@@ -42,7 +44,12 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:15px;
+    gap:5px;
+
+    border:2px solid #00d6dd;
+    background:rgba(0, 51, 99, 0.295);
+    padding:20px;
+    border-radius:50px;
 }
 
 #playBtn{
@@ -52,17 +59,20 @@ body{
     border:none;
     border-radius:50%;
 
-    background:#6c63ff;
+    background:#00d6dd;
     color:white;
 
-    font-size:32px;
+    font-size:40px;
     cursor:pointer;
 
     transition:.3s;
+
+    box-shadow: 0 0 30px #00d6dd;
 }
 
 #playBtn:hover{
     transform:scale(1.1);
+    
 }
 
 .waves{
@@ -80,7 +90,7 @@ body{
 .waves span{
     width:6px;
     height:100%;
-    background:#6c63ff;
+    background:#00a2ff;
     border-radius:20px;
 
     animation:wave 1s infinite ease-in-out;
@@ -119,5 +129,5 @@ body{
 .progress{
     width:0%;
     height:100%;
-    background:#6c63ff;
+    background:#2da0ff;
 }
